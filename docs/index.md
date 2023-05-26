@@ -17,3 +17,7 @@ Create an API key for your project by going to our [developers](https://kili.so/
 API keys are specific to a project on Kili.
 
 Once you've created a key, generate your first answer using the next page.
+
+### Endpoint
+
+All requests should be made using this base URL: https://www.kili.so/api/v1. For example, if you want to call the answer endpoint, make requests to this endpoint: https://www.kili.so/api/v1/answer
