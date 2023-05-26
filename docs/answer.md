@@ -98,6 +98,8 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
         "description": "Ideal for Casual Wear"
       }
     }
-  ]
+  ],
+  tokens: 456,
+  chat_id: "e7d659c6-2g55-4e21-9b97-9813er1c9b14"
 }
 ```
