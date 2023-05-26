@@ -59,8 +59,10 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
   - url: url for the source, if available.
   - content: content of the source. This context is embedded and retreived based on the user's question. If no metadata is provided, this information is used to generate an answer.
   - metadata: any metadata that was supplied for this source. IF available, this metadata is used in the context to generate the response.
+- tokens (int): number of tokens used for generating the answer.
+- chat_id (string): unique ID used to identify this chat. Use this variable to persist chat history.
 
-**Example:**
+**Sample response:**
 
 ```
 {
