@@ -19,8 +19,8 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "teamkili", // Usually your GitHub org/user name.
-  projectName: "docs", // Usually your repo name.
-
+  projectName: "teamkili.github.io", // Usually your repo name.
+  deploymentBranch: "main",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
