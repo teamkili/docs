@@ -13,7 +13,7 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
 "Authorization": "Bearer [YOUR_API_KEY]"
 }
 
-## Request:
+## Request
 
 **Required:**
 
