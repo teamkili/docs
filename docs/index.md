@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # API documentation
 
-This page contains API documentation for Kili.
+This page contains API documentation for Kili. If you are looking for general documentation about how to use Kili, please visit this **[link](https://gregarious-soul-c50.notion.site/Kili-Help-Centre-0be794a6c292491d8375552ff073767e?pvs=4)**.
 
 ## Getting Started
 
