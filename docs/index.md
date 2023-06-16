@@ -20,4 +20,4 @@ Once you've created a key, generate your first answer using the next page.
 
 ### Endpoint
 
-All requests should be made using this base URL: https://www.kili.so/api/v1. For example, if you want to call the answer endpoint, make requests to this endpoint: https://www.kili.so/api/v1/answer
+All requests should be made using this base URL: https://api.kili.so/v1. For example, if you want to call the answer endpoint, make requests to this endpoint: https://api.kili.so/v1/answer

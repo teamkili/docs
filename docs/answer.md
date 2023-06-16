@@ -4,7 +4,7 @@ This API endpoint allows you to generate an answer to a question based on the co
 
 ## Endpoint
 
-- POST https://www.kili.so/api/v1/answer
+- POST https://api.kili.so/v1/answer
 
 ## Authentication
 
