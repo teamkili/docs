@@ -63,6 +63,7 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
   - content: content of the source. This context is embedded and retreived based on the user's question. If you've
 - tokens (int): number of tokens used for generating the answer.
 - chat_id (string): unique ID used to identify this chat. Use this variable to persist chat history.
+- is_answered (boolean): a boolean that identifies if the assistant was able to answer the question or not.
 
 **Sample response:**
 
@@ -85,7 +86,9 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
       "content": "All purchases are eligible for a full refund within 30 days of purchase"
     }
   ],
-  tokens: 456,
-  chat_id: "e7d659c6-2g55-4e21-9b97-9813er1c9b14"
+  "tokens": 456,
+  "chat_id": "e7d659c6-2g55-4e21-9b97-9813er1c9b14",
+  "is_answered": true
+
 }
 ```
