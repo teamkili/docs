@@ -25,7 +25,7 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
 
 **Optional:**
 
-- chat_thread_id (string): A string identifier to store the original chat ID. Provide a unique ID for the chat session.
+- chat_thread_id (string): A string identifier to store the original chat ID. If not provided, we will automatically create one for you and send back in the response. If included and we find a matching ID, we will resume that specific chat.
 
 **Sample request:**
 
@@ -45,14 +45,13 @@ The response is streamed through server-sent events(SSE). A series of message ev
 
 2. `chat_id` and `chat_thread_id` are unique ID used to identify this chat. This can be used to persist the chat history.
 
-
 3. `result` which includes the context associated with the generated answer to your question and some extra information.
-
 
 **Parameters:**
 
 - message:
-    - message (string): A part of the generated response
+
+  - message (string): A part of the generated response
 
 - chat_id (string)
 - chat_thread_id (string)
@@ -67,7 +66,8 @@ The response is streamed through server-sent events(SSE). A series of message ev
 
 **Sample response:**
 
-You'll first recieve several events with `message` JSON like so: 
+You'll first recieve several events with `message` JSON like so:
+
 ```
 {
   "message": "example"
@@ -76,11 +76,12 @@ You'll first recieve several events with `message` JSON like so:
 
 Then followed by the `chat_id` and `chat_thread_id` JSON:
 {
-  "chat_id": "e7d659c6-2g55-4e21-9b97-9813er1c9b14",
-  "chat_thread_id": "f7d359g6-3g5g-te28-1b87-9813er1c9b14"
+"chat_id": "e7d659c6-2g55-4e21-9b97-9813er1c9b14",
+"chat_thread_id": "f7d359g6-3g5g-te28-1b87-9813er1c9b14"
 }
 
-Then for every context used to generate the answer, a separate event with `result` JSON is sent:
+For each piece of context used to generate the answer, a separate event with `result` JSON is sent:
+
 ```
 "result": {
   "id": "d25a49b3-f57f-4fa3-937f-8ab356c5e605",
