@@ -28,25 +28,15 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
 - history (array): An array of chat history objects representing the conversation. Each object in the array should have the following properties:
   - role (string): The role of the participant in the conversation. Use "user" for user messages and "assistant" for assistant messages.
   - content (string): The content of the message. Enter the text of the message for each role.
-- chat_id (string): A string identifier to store the original chat ID. Provide a unique ID for the chat session.
+- chat_thread_id (string): A string identifier to store the original chat ID. Provide a unique ID for the chat session.
 
 **Sample request:**
 
 ```
 {
 	"project_id": "19a365f4-504a-4fe5-9a2d-66f40ee4581e",
-	"chat_id": "31a67fb9-70f5-4638-bfae-c0c9f4e3600c",
+	"chat_thread_id": "31a67fb9-70f5-4638-bfae-c0c9f4e3600c",
 	"question": "How do I get a refund on my account?",
-	"history":[
-			{
-        "role": "user",
-        "content": "Do you offer refunds?"
-      },
-      {
-        "role": "assistant",
-        "content": "Yes, we offer full refunds within 30 days of purchase."
-      }
-		]
 }
 ```
 
@@ -62,7 +52,7 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
   - url: url for the source, if available.
   - content: content of the source. This context is embedded and retreived based on the user's question. If you've
 - tokens (int): number of tokens used for generating the answer.
-- chat_id (string): unique ID used to identify this chat. Use this variable to persist chat history.
+- chat_thread_id (string): unique ID used to identify this chat. Use this variable to persist chat history.
 - is_answered (boolean): a boolean that identifies if the assistant was able to answer the question or not.
 
 **Sample response:**
@@ -87,7 +77,7 @@ Authentication is done using a bearer token. Include the bearer token in the "Au
     }
   ],
   "tokens": 456,
-  "chat_id": "e7d659c6-2g55-4e21-9b97-9813er1c9b14",
+  "chat_thread_id": "e7d659c6-2g55-4e21-9b97-9813er1c9b14",
   "is_answered": true
 
 }
