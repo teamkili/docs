@@ -1,4 +1,4 @@
-# Generate answers
+# Stream answers
 
 This API endpoint allows you to stream a generated answer to a question based on the context you have ingested into Kili. The endpoint allows you to maintain full history of the conversation.
 
